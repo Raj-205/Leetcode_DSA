@@ -4,7 +4,10 @@ public:
         int n = matrix.size();
         for(int i=0;i<n;i++){
             for(int j=i+1;j<n;j++){
-                swap(matrix[i][j],matrix[j][i]);
+                int temp = matrix[i][j];
+                 matrix[i][j]= matrix[j][i];
+                 matrix[j][i]= temp;
+               // swap(matrix[i][j],matrix[j][i]);
             }
         }
         for(int i=0;i<n;i++){
