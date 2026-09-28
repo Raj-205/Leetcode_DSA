@@ -7,7 +7,7 @@ public:
             copy.push_back(arr[i]);
         }
         sort(arr.begin(),arr.end());
-        std::map<int,int>mpp;
+        std::unordered_map<int,int>mpp;
         int rank=1;
         for(int i=0;i<n;i++){
             if(mpp.find(arr[i])==mpp.end()){
