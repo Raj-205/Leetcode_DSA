@@ -10,7 +10,7 @@ public:
         while(r<n){
             mpp[s[r]]++;
             maxfre = max(maxfre , mpp[s[r]]);
-            if((r-l+1-maxfre)>k){
+            while((r-l+1-maxfre)>k){
                 mpp[s[l]]--;
                 l++;
             }
