@@ -7,15 +7,24 @@ public:
         int maxlen =0;
         int maxfre =0;
         unordered_map<char ,int>mpp;
-        while(r<n){
+       /* while(r<n){
             mpp[s[r]]++;
             maxfre = max(maxfre , mpp[s[r]]);
             while((r-l+1-maxfre)>k){
                 mpp[s[l]]--;
-                l++;
+            l++;
             }
             maxlen = max(maxlen , r-l+1);
             r++;
+        }*/
+        for( r=0;r<n;r++){
+            mpp[s[r]]++;        
+            maxfre = max(maxfre , mpp[s[r]]);
+            while( (r-l+1 )- maxfre>k){
+                mpp[s[l]]--;
+                l++;
+            }
+            maxlen = max(maxlen, r-l+1);
         }
        return maxlen; 
     }
